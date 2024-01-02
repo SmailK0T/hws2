@@ -11,6 +11,7 @@ type AffairPropsType = {
 
 function Affair(props: AffairPropsType) {
     const deleteCallback = () => {
+        debugger
         // need to fix
         props.deleteAffairCallback(props.affair._id)
     }
@@ -38,7 +39,6 @@ function Affair(props: AffairPropsType) {
                 className={buttonClass}
                 onClick={deleteCallback}
                 // need to fix
-
             >
                 {/*текст кнопки могут изменить студенты*/}
                 X
