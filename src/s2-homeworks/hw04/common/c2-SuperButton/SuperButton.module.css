@@ -4,6 +4,7 @@
     border-radius: 3px;
     color: #FFFFFF;
     border: none;
+
     font-size: 14px;
 }
 
@@ -14,12 +15,14 @@
 
 .secondary {
     width: 176px;
-    border: 1 px solid #0066CC;
+    border: 1px solid #0066CC;
     background-color: #FFFFFF;
+    color: #0066CC;
 }
 
 .default {
-    background-color: #0066CC;
+    
+    background-color: #00376d;
 }
 
 .red {
