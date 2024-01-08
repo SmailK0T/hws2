@@ -8,7 +8,6 @@ type GreetingContainerPropsType = {
 }
 
 export const pureAddUser = (name: string, setError: React.Dispatch<React.SetStateAction<string>>, setName: React.Dispatch<React.SetStateAction<string>>, addUserCallback: (name: any) => void) => {
-    
     if (name.trim() === "") {
         setError("Ошибка! Введите имя!")
     } else {
@@ -49,6 +48,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
     const addUser = () => {
         pureAddUser(name, setError, setName, addUserCallback)
+        
     }
 
     const onBlur = () => {
@@ -60,7 +60,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const totalUsers = users.length // need to fix
-    const lastUserName = name // need to fix
+    const lastUserName = users.length > 0 ? users[users.length - 1].name : '';// need to fix
 
     return (
         <Greeting
